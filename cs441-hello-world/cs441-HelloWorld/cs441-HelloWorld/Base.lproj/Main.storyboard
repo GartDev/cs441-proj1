@@ -21,37 +21,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l48-e6-oU4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l48-e6-oU4">
                                 <rect key="frame" x="133" y="118" width="109" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Hello World!">
-                                        <attributes>
-                                            <font key="NSFont" size="35" name=".AppleSystemUIFont"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiF-RW-KOU">
-                                <rect key="frame" x="75" y="404" width="225" height="131"/>
+                                <rect key="frame" x="63" y="404" width="250" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Click if you got this">
+                                <state key="normal" title="Push as much as you want">
                                     <color key="titleColor" red="0.42450669407844543" green="0.077467851340770721" blue="0.096281535923480988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pb4-Um-bs0"/>
+                                </connections>
                             </button>
+                            <imageView opaque="NO" multipleTouchEnabled="YES" tag="-1" contentMode="scaleAspectFit" fixedFrame="YES" image="Count" translatesAutoresizingMaskIntoConstraints="NO" id="0jo-fh-OzN">
+                                <rect key="frame" x="87" y="239" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.56035125255584717" green="0.91747277975082397" blue="0.74924176931381226" alpha="0.42026969178082191" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="GLButton" destination="XiF-RW-KOU" id="iEe-QS-r2r"/>
+                        <outlet property="headertext" destination="l48-e6-oU4" id="atS-bC-leZ"/>
+                        <outlet property="myImage" destination="0jo-fh-OzN" id="seb-lA-MQ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="614" y="-214"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Count" width="840" height="544"/>
+    </resources>
 </document>

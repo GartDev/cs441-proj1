@@ -13,20 +13,27 @@
 @end
 
 @implementation ViewController
-
+int count = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (IBAction)GLButton:(id)sender{
-    [sender setTitle:@"WhAPPAAAA" forState:UIControlStateNormal];
+    [self.GLButton setTitle:@"Count" forState:UIControlStateNormal];
+    self.headertext.text = @"Hell0 W0rld!";
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (IBAction)handleButtonPress:(id)sender {
+    
+    count++;
+    NSString *strcount=[NSString stringWithFormat:@"%d",count];
+    self.headertext.text = strcount;
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.headertext resignFirstResponder];
+}
 
 @end

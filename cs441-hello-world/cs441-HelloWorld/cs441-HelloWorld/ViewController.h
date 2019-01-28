@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImage *myImage;
+@property (weak, nonatomic) IBOutlet UILabel *headertext;
 
 @property (strong, nonatomic) IBOutlet UIButton *GLButton;
-
+extern int count;
 @end
 
